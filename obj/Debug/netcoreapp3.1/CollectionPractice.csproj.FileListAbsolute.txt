@@ -1,0 +1,11 @@
+C:\Users\mahmud\source\repos\CollectionPractice\bin\Debug\netcoreapp3.1\CollectionPractice.exe
+C:\Users\mahmud\source\repos\CollectionPractice\bin\Debug\netcoreapp3.1\CollectionPractice.deps.json
+C:\Users\mahmud\source\repos\CollectionPractice\bin\Debug\netcoreapp3.1\CollectionPractice.runtimeconfig.json
+C:\Users\mahmud\source\repos\CollectionPractice\bin\Debug\netcoreapp3.1\CollectionPractice.runtimeconfig.dev.json
+C:\Users\mahmud\source\repos\CollectionPractice\bin\Debug\netcoreapp3.1\CollectionPractice.dll
+C:\Users\mahmud\source\repos\CollectionPractice\bin\Debug\netcoreapp3.1\CollectionPractice.pdb
+C:\Users\mahmud\source\repos\CollectionPractice\obj\Debug\netcoreapp3.1\CollectionPractice.csprojAssemblyReference.cache
+C:\Users\mahmud\source\repos\CollectionPractice\obj\Debug\netcoreapp3.1\CollectionPractice.AssemblyInfoInputs.cache
+C:\Users\mahmud\source\repos\CollectionPractice\obj\Debug\netcoreapp3.1\CollectionPractice.AssemblyInfo.cs
+C:\Users\mahmud\source\repos\CollectionPractice\obj\Debug\netcoreapp3.1\CollectionPractice.dll
+C:\Users\mahmud\source\repos\CollectionPractice\obj\Debug\netcoreapp3.1\CollectionPractice.pdb

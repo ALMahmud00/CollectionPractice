@@ -18,6 +18,10 @@ namespace CollectionPractice
             BookAuthor = bAuthor;
             BookStock = bStock;
         }
+        public void ShowBookList()
+        {
+            Console.WriteLine(BookCode + "____" + BookName + "____" + BookAuthor + "____" + BookStock);
+        }
 
       
     }

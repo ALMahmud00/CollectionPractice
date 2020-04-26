@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CollectionPractice
 {
@@ -49,44 +50,40 @@ namespace CollectionPractice
                         Console.WriteLine("Borrow Book Quantity: ");
                         quantity = Convert.ToInt32(Console.ReadLine());
 
-                        for (int i = 0; i < BookList.Count; i++)
-                        {
-                            if (BookList[i].BookCode == code)
-                            {
-                                if (BookList[i].BookStock >= quantity)
-                                {
-                                    Console.WriteLine("Successfully Book Borrowed from Library");
-                                    BookList[i].BookStock -= quantity;
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Sorry Given Quantity is not Available on Stock");
-                                }
+                        var borrowBook = (from m in BookList
+                                          where m.BookCode == code
+                                          select m).FirstOrDefault();
 
-                                break;
-                            }
+                        if (borrowBook.BookStock >= quantity)
+                        {
+                            Console.WriteLine("Successfully Book Borrowed from Library");
+                            borrowBook.BookStock -= quantity;
                         }
+                        else
+                        {
+                            Console.WriteLine("Sorry Given Quantity is not Available on Stock");
+                        }
+
                         break;
                     case 3:
                         Console.WriteLine("Book Code: ");
                         code = Console.ReadLine();
                         Console.WriteLine("Return Book Quantity: ");
                         quantity = Convert.ToInt32(Console.ReadLine());
-                        for (int i = 0; i < BookList.Count; i++)
-                        {
-                            if (BookList[i].BookCode == code)
-                            {
-                                BookList[i].BookStock += quantity;
-                                Console.WriteLine("Successfully Book Returned to library");
-                                break;
-                            }
-                        }
+
+                        var returnBook = (from m in BookList
+                                         where m.BookCode == code
+                                         select m).FirstOrDefault();
+                        returnBook.BookStock += quantity;
+                        Console.WriteLine("Successfully Book Returned to library");
+
+                        
                         break;
                     case 4:
                         Console.WriteLine("Code____Name____Author____Remaining Stock");
                         foreach (var item in BookList)
                         {
-                            Console.WriteLine(item.BookCode + "____" + item.BookName + "____" + item.BookAuthor + "____" + item.BookStock);
+                            item.ShowBookList();
                         }
                         break;
                     case 5:
